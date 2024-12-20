@@ -32,9 +32,6 @@
             <option value="no14">Vehicles</option>
             <option value="no15">Flags</option>
             <option value="no16">Foods</option>
-
-
-
           </select>
         </div>
         <picture>
@@ -42,7 +39,9 @@
             type="image/webp"
             >
         <img id="slideshow" class="w-full h-full object-cover rounded-xl transition-opacity duration-50" 
-             loading="lazy"
+             loading="eager"
+             role = "presentation"
+             sizes="(max-width: 800px), 100vw, 50vw"
              src="/images/start.jpg" 
              alt="Chess game">
           </picture>
