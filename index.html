@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Christmas Showdown</title>
     
-    <script type="module" crossorigin src="/assets/index-e88b795a.js"></script>
+    <script type="module" crossorigin src="/assets/index-32e1b529.js"></script>
     <link rel="stylesheet" href="/assets/index-11961983.css">
   </head>
   <body class="bg-gray-900 text-white">
@@ -72,7 +72,7 @@
 
         <!-- Controls -->
         <div class="controls flex flex-col gap-4 justify-center">
-          <button id="startBtn" class="px-6 py-2 bg-green-600 hover:bg-green-700 rounded">
+          <button id="startBtn" onclick = "document.getElementById('start').play()" class="px-6 py-2 bg-green-600 hover:bg-green-700 rounded">
             Start
           </button>
           <button id="resetBtn" onclick="reset()" class="px-6 py-2 bg-red-600 hover:bg-red-700 rounded">
@@ -117,10 +117,10 @@
     
     <script>
       var audio = document.getElementById('start');
-      audio.volume = 0;
+      audio.volume = 0.05;
       function reset(){
-        start.currentTime = 0;
-        start.pause();
+        audio.currentTime = 0;
+        audio.pause();
       }
     </script>
   </body>
