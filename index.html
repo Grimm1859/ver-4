@@ -3,19 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Christmas Show</title>
+    <title>Christmas Showdown</title>
     
-    <script type="module" crossorigin src="/assets/index-1b886d4d.js"></script>
-    <link rel="stylesheet" href="/assets/index-4404e68c.css">
+    <script type="module" crossorigin src="/assets/index-32e1b529.js"></script>
+    <link rel="stylesheet" href="/assets/index-11961983.css">
   </head>
   <body class="bg-gray-900 text-white">
     <div id="app" class="min-h-screen flex flex-col items-center justify-center p-4">
-      <h1 class="text-4xl font-bold mb-8">Christmas Show</h1>
+      <h1 class="text-4xl font-bold mb-8">Christmas Showdown</h1>
       
       <!-- Slideshow Container -->
-      <div class="mb-8 w-full max-w-2xl mx-auto">
-        <div class="flex justify-between items-center mb-4">
-          <select id="categorySelect" class="bg-gray-800 text-white px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+      <div class="slideshow">
+        <div class="flex justify-center items-center mb-4 rounded">
+          <select id="categorySelect" class="form-control text-white bg-gray-800 rounded px-2 flex-col mb-3" onfocus="this.size=4;" onblur='this.size=1;' onchange='this.size=1; this.blur();'>
             <option value="default">Please choose a catergory</option>
             <option value="classic">Disney & Pixar Movies</option>
             <option value="modern">Drinks</option>
@@ -32,6 +32,27 @@
             <option value="no14">Vehicles</option>
             <option value="no15">Flags</option>
             <option value="no16">Foods</option>
+            <option value="no17">Meats and Vegetables</option>
+            <option value="no18">Fairy Tales</option>
+            <option value="no19">All Things Harry Porter</option>
+            <option value="no20">Sport Equipments</option>
+            <option value="no21">App/Game Icons</option>
+            <option value="no22">Mammals</option>
+            <option value="no23">Sea Creatures</option>
+            <option value="no24">Birds</option>
+            <option value="no25">Flowers</option>
+            <option value="no26">Jobs</option>
+            <option value="no27">Clothes</option>
+            <option value="no28">Kitchen Utensils</option>
+            <option value="no29">Furniture</option>
+            <option value="no30">Electronic devices</option>
+            <option value="no31">School Supplies</option>
+            <option value="no32">Wonders of the world</option>
+            <option value="no33">TV Shows</option>
+            <option value="no34">Christmas Tranditions and Figures</option>
+            <option value="no35">Bathroom Items</option>
+            <option value="no36">Plants and Trees</option>
+            <option value="no37">Bugs</option>
           </select>
         </div>
         <img id="slideshow" class="w-full h-full object-cover rounded-xl transition-opacity duration-50" 
@@ -39,7 +60,7 @@
              alt="Chess game">
       </div>
 
-      <div class="flex flex-col md:flex-row gap-8">
+      <div class="flex md:flex-row gap-8 aboslute">
         <!-- Player 1 Clock -->
         <div id="player1" class="player-clock bg-gray-800 p-8 rounded-xl cursor-pointer">
           <h2 class="text-xl mb-2">Player 1</h2>
@@ -95,10 +116,11 @@
     <audio src = "/audios/wrong.mp3" id = "stop"></audio>
     
     <script>
-      var start = document.getElementById('start');
+      var audio = document.getElementById('start');
+      audio.volume = 0.05;
       function reset(){
-        start.currentTime = 0;
-        start.pause();
+        audio.currentTime = 0;
+        audio.pause();
       }
     </script>
   </body>
